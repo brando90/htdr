@@ -1,0 +1,84 @@
+\documentclass{article}
+
+\usepackage{neurips_2025}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{booktabs}
+\usepackage{amsfonts}
+\usepackage{nicefrac}
+\usepackage{microtype}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{soul}
+\usepackage{enumitem}
+\usepackage{adjustbox}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+% --- Author comment macros ---
+\newcommand{\todo}[1]{\textcolor{red}{[TODO: #1]}}
+\newcommand{\andrea}[1]{\textcolor{purple}{[AY: #1]}}
+\newcommand{\louise}[1]{\textcolor{blue}{[LY: #1]}}
+
+\title{De-risking Frontier Projects: A Systematic Framework \& Review for Tackling High-Uncertainty Work}
+
+\author{
+  Alycia Lee\textsuperscript{1,2,*} \And
+  Brando Miranda\textsuperscript{1,2,*} \And
+  Sudharsan Sundar\textsuperscript{1} \And
+  Sanmi Koyejo\textsuperscript{1} \\
+  \textsuperscript{1}Department of Computer Science, Stanford University, Palo Alto, USA \\
+  \textsuperscript{*}Corresponding authors: \texttt{alylee15@stanford.edu}, \texttt{brando9@stanford.edu}
+}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+The prevailing belief in computer-science training holds that research mastery emerges primarily through prolonged apprenticeship---a model that leaks time, talent, and R\&D (Research and Development) capital.
+We challenge this assumption by formalising \textbf{Velocity--Vectoring}, a decision loop distilled from Bernstein's 197 lectures~\cite{bernstein2025cs197}.
+The loop ranks uncertainties by potential impact, then resolves the highest-risk item through the leanest viable experiment.
+We instantiate the loop as an open-source toolkit comprising assumption-mapping worksheets, one-week sprint planners, and automated ``velocity gauges'' that visualise learning per unit time.
+We evaluate the toolkit on three high-uncertainty initiatives---a graduate machine-learning project, an industry research prototype, and a seed-stage startup---achieving a two-to-four-fold reduction in time-to-insight versus ad-hoc baselines.
+These results indicate that Velocity--Vectoring compresses exploration cycles, improves return on research investment (ROI), and scales mentorship quality across academia and industry.
+\end{abstract}
+
+\input{01_introduction}
+\input{02_abstract_blueprint}
+\input{03_ml_research_advice}
+\input{04_musk_five_steps}
+\input{05_efficiency_tips}
+\input{06_cs197_insights}
+\input{07_writing_effectively}
+\input{08_great_research_paper}
+\input{09_ml_practitioner_advice}
+\input{10_sop_writing}
+\input{11_tweprints}
+\input{12_getting_started_yc}
+\input{13_deep_understanding}
+\input{14_sanity_checks}
+\input{15_writing_nonfiction}
+\input{16_psychological_profile}
+\input{17_training_attention}
+\input{18_success_factors}
+\input{19_tacit_knowledge}
+\input{20_junior_phd_guide}
+\input{21_academic_positioning}
+\input{22_dual_strategies}
+
+\input{97_acknowledgments}
+
+\clearpage
+\bibliography{references}
+\bibliographystyle{neurips}
+
+\clearpage
+\appendix
+\input{98_appendix}
+
+\end{document}

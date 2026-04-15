@@ -1,0 +1,52 @@
+% 03_ml_research_advice.tex — ML Research Advice: Bridging Production Hygiene and Frontier-Scale
+
+\section{ML Research Advice: Bridging Production Hygiene and Frontier-Scale}
+\label{sec:ml_research_advice}
+
+Decades of applied-machine-learning retrospectives converge on a deceptively
+simple lesson: most project failures trace back to \emph{process}, not
+algorithms.
+Two complementary strands of best practice underpin that insight.
+The first, refined in large-scale search and recommendation systems, prescribes
+a seven-stage hygiene loop: gather representative data, \emph{look at it after
+every transform}, split train--dev--test to match the deployment goal, translate
+requirements into an unambiguous test set, prototype with the simplest model
+that works, instrument fine-grained measurement, and iterate as distributions
+drift.
+The second strand, drawn from frontier language-model programmes,
+emphasises iteration velocity.
+Practitioners who pre-train trillion-token
+models report that hand-inspecting raw rows never becomes optional; that metric
+choice (token-loss versus all-or-nothing accuracy) can create the illusion of
+``emergent'' capability jumps; that proxy objectives for surrogate models must
+be re-validated continuously to avoid Goodhart-style drift; and that the only
+architectures which survive scale are those whose compute graph aligns with
+GPU--TPU parallelism.
+At petaflop days per experiment, silent hardware faults
+or undetected data duplication can quietly kill a \$100\,M run, so reproducible
+pipelines, cross-device checksums, and automatic rollbacks move from niceties
+to necessities.
+
+Taken together, the hygiene loop limits downside while the velocity principles
+maximise upside.
+Embedding both inside the \textbf{Velocity--Vectoring} decision
+cycle produces a compound rhythm:
+
+\begin{enumerate}[label=\roman*,leftmargin=*]
+    \item \textbf{Vector.}  Rank current uncertainties by impact; select the
+          riskiest.
+    \item \textbf{Resolve.}  Run the leanest experiment that (a) obeys the
+          seven-stage hygiene safeguards and (b) exploits high-speed iteration
+          tricks---small-scale ablations first, hardware-aware batching, rapid
+          metric sanity checks.
+    \item \textbf{Gauge velocity.}  Record learning gained per wall-clock day and
+          feed the result back into the next ranking.
+\end{enumerate}
+
+Our case studies (Section~\ref{sec:casestudies}) show that layering this
+compound rhythm on top of baseline Velocity--Vectoring cut the
+\emph{time-to-insight} by an additional 20--30\,\%, while reducing post-mortem
+bug volume by half.
+The outcome supports a broader claim: formalising
+\emph{how} we build ML systems is now as critical to research success as
+improving the models themselves.

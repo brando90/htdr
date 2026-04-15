@@ -1,0 +1,199 @@
+% 06_cs197_insights.tex — Insights from CS197 (Vectoring, Velocity, Evaluations)
+
+\section{Insights from CS197}
+\label{sec:cs197_insights}
+
+\todo{Fill in these lectures}
+\subsection{What is Research?}
+\subsection{``Bit Flips''}
+\subsection{Arguing a Research Project}
+
+\subsection{Vectoring}
+
+Research often feels confusing or overwhelming because it involves solving a problem \textit{that no one has solved before.}
+Researchers (especially in the early stages of their careers) may feel lost, fixate on ``fatal flaws'' in their project, or want to give up after a lack of immediate progress.
+However, research is not a linear process.
+It involves iteration, exploration, and constant refinement --- unlike, perhaps, assignments in school where the process is to settle on an idea and then simply complete it.
+
+Successful research depends on two skills ``in a tight loop with one another'' \todo{cite Michael Bernstein}.
+\begin{itemize}
+    \item \textbf{Vectoring:} identifying the biggest dimension of risk (e.g., a major assumption).
+    \item \textbf{Velocity:} rapidly reducing risk along that vector (i.e., learning as fast as possible).
+\end{itemize}
+
+Instead of trying to focus on every open direction at once, pick just one dimension of uncertainty (the \textit{vector}) and derisk it.
+The vector should be something that can be explored within a week or two.
+Some examples include piloting a new technique, engineering a technique under a realistic workload, proving a certain case or result, or designing a prototype interface.
+
+In research, iteration trumps planning.
+Ideas rarely turn out how they are expected to.
+Thus, it is important to determine which ideas are worth spending time on, before bad ideas sink too much energy or (even worse) become a foundation for the project.
+
+Of course, vectoring often raises new questions.
+Pick a new vector to derisk those results or uncertainties.
+The goal is to answer questions \textit{satisfactorily,} not necessarily in full detail.
+Successful vectoring allows researchers to rapidly focus on core insights.
+
+\subsubsection*{The Vectoring Process}
+\begin{enumerate}
+    \item Generate questions (assumptions, risky decisions, etc.).
+    \item Rank the questions from most to least critical.
+    \item Pick the most critical and answer it quickly.
+\end{enumerate}
+
+\subsection{Velocity}
+
+Research progress often feels slow, demotivating, or frustrating---not because one is doing it wrong, but because research inherently involves exploring unknown territory.
+The traditional markers of success (e.g., system works, results are positive) become misleading in high-uncertainty environments.
+Instead, research success should be defined as \textit{learning}, especially rapid learning.
+This reframing is captured by the concept of \textbf{velocity}.
+
+As discussed previously, successful research relies on two interlinked skills: Vectoring and Velocity.
+Velocity measures how quickly a researcher is learning about their problem space.
+It is not about how far one has ``progressed'' in terms of code written or features built, but about whether the researcher has gained insights that clarify what to do next.
+This includes identifying failures, running small tests, or producing plots that validate or falsify assumptions.
+
+\subsubsection*{Core-Periphery Mindset}
+
+Achieving high velocity requires a strategic mindset:
+\begin{itemize}
+    \item Identify the \textbf{core} of your current week's research question---what needs to be tested or understood.
+    \item Ruthlessly ignore or fake the \textbf{periphery}---details that are not necessary to answer the core question.
+\end{itemize}
+
+Instead of building full systems or polishing code, researchers should focus on producing simplified prototypes, running small-scale simulations, or using off-the-shelf models and APIs.
+For example, a paper investigating LLM emergence used modular arithmetic tasks and OpenAI APIs to test hypotheses without the overhead of training large models.
+
+\subsubsection*{Rethinking Progress: Learning Over Perfection}
+
+In coursework or industry, effort tends to correlate with outcomes: build more, get more done.
+However, in research, especially under high uncertainty, this mindset breaks down.
+Researchers often enter the ``swamp''---a period of prolonged stagnation or repeated failure.
+This is not a personal shortcoming, but a natural consequence of exploring the unknown.
+In these moments, defining success as ``results that work'' is not only misleading but demotivating.
+
+Instead, we redefine progress as \textbf{learning}---specifically, how much insight is gained per unit time.
+This is captured by the metaphorical equation:
+\[
+V = \frac{D}{T}
+\]
+where $V$ is research velocity, $D$ is the amount of insight or derisking, and $T$ is the time spent.
+Because $D$ (insight) is often hard to increase quickly, reducing $T$---i.e., the time spent per iteration---yields the largest gains in velocity.
+In fact, completely ignoring tasks that are periphery (e.g., polishing code, building full systems) can lead to ``infinite'' relative gains by preventing wasted effort.
+
+To move quickly, researchers must embrace \textbf{imperfect, incomplete prototypes}.
+The goal of a week's work is not to produce a final system, but to answer a focused question, even if the result is a negative finding.
+Imperfection is not a flaw---it's a strategic asset.
+By simplifying tasks, mocking unimportant components, or using toy data, researchers can accelerate iteration and surface valuable insights rapidly.
+
+As a guiding principle: \textit{you achieved something if you learned something}, not if you merely wrote more code or built something complex.
+Enlightened trial and error consistently outperforms careful but slow overplanning.
+The faster one can iterate and learn, the faster one moves through the swamp, and the more impactful the research becomes.
+
+
+\subsubsection*{Practical Velocity Tips}
+\begin{itemize}
+    \item Cut down time per iteration to increase learning rate.
+    \item Build toy models or run small simulations to test ideas quickly.
+    \item Present early and often for external feedback.
+    \item Use walks, silence, and idle reflection to surface creative insights.
+    \item If stuck, reduce scope rather than pivoting projects.
+\end{itemize}
+
+\subsubsection*{Velocity vs.\ Vectoring: Why Speed Reveals What Matters}
+
+Research is often framed as a two-step loop: first, identify the riskiest assumption (vectoring), and then run a fast experiment to test it (velocity).
+But in real-world projects, this tidy separation rarely holds: it's nearly impossible to know ahead of time which part of a project is truly the bottleneck.
+Our instincts are often wrong, and what seems important can turn out to be peripheral.
+To understand this tension, we can consider the following two stories.
+
+\paragraph{The Pottery Class}
+In the book \textit{Art \& Fear}, a ceramics teacher splits a class into two groups.
+One group is graded on the quality of a single pot.
+The other is graded purely on the number of pots made.
+Surprisingly, the quantity group ends up producing better work.
+Why? Because they practiced more, failed more, and learned faster.
+By focusing on speed and iteration rather than perfection, they discovered what techniques worked---and improved quickly.
+
+\paragraph{The Monkey and the Pedestal}
+Now contrast that with a story about misplaced effort.
+Suppose your goal is to train a monkey to juggle flaming torches while standing on a pedestal.
+Building the pedestal is easy; training the monkey is hard.
+Yet many people start with the pedestal---it feels more tractable.
+The key insight here is to identify and work on the riskiest, most uncertain part first.
+That's vectoring: focusing your effort on the part most likely to make or break your project.
+
+\paragraph{When the Simple Aggregation Was Right}
+High-uncertainty research often fails not because teams lack intelligence or
+technical skill, but because promising ideas are never surfaced.
+This failure mode is fundamentally social.
+A small but instructive episode during work on
+leveraging mutual information (TVD-MI) to compare agents illustrates how this
+happens---and how to avoid it.
+
+When exploring how to generate individual-level TVD-MI scores from pairwise
+comparisons, an initial instinct was to compute scores by taking row-wise
+averages of a pairwise score matrix.
+The approach felt plausible, but also
+\emph{too simple}---almost suspiciously direct---given how long the team had been
+thinking about the problem.
+Instead of testing it, progress stalled.
+The team consulted an LLM, which suggested a more elaborate PCA-based
+decomposition.
+This alternative sounded sophisticated and convincing, and the
+row-averaging idea was never proposed.
+
+A week later, after revisiting the original paper directly, it became clear that the simple row-wise aggregation was correct all along.
+It was not too simple---it was clear and faithful to the definition.
+The detour through PCA added complexity, delayed validation, and obscured the core insight without improving correctness.
+
+The failure here was not technical.
+It was cultural.
+The idea was withheld out of concern it may be ``too basic,'' or ``not sophisticated enough.''
+In high-uncertainty research, however, these simple ideas are often the right ones: they are more interpretable, easier to falsify, and better aligned with first principles.
+
+These stories represent three complementary research strategies:
+\begin{itemize}
+    \item The monkey story teaches us to find and confront the core risk early.
+    \item The pottery story shows us that fast iteration helps us learn what the core risk actually is.
+    \item The simple aggregation story shows that basic is not bad: simple ideas often dominate because they are clearer, more explainable, and easier to test.
+\end{itemize}
+
+Speed isn't just to execute on a chosen direction---it's how you discover whether that direction was correct in the first place.
+Velocity creates the conditions for better vectoring.
+By rapidly building, testing, and failing, you expose flawed assumptions, uncover hidden bottlenecks, and sharpen your sense of where the real uncertainty lies.
+Start with the most explainable and falsifiable approaches---no matter how basic---and build up from there.
+Thus, while vectoring and velocity are tightly coupled, velocity may come first in practice: it is through velocity that we discover what truly needs to be vectorized.
+Together, they form a loop: make a directional guess, test it quickly, and update your belief.
+Then re-vector, and repeat the process.
+
+\subsection{Designing and Executing Effective Evaluations}
+
+In research, evaluation serves as the bridge between proposing an idea and convincing the scientific community of its validity.
+Every field has its own standards of evidence---for example, randomized controlled trials in medicine, formal proofs in mathematics, or benchmark-based experiments in machine learning.
+Understanding the conventions and expectations of one's audience is essential, as these determine both the credibility and impact of the work.
+
+A productive evaluation strategy begins with a precise articulation of the \emph{thesis} (an assertion to be maintained) and, if applicable, the \emph{hypothesis} (a prediction to be tested).
+The ``bit flip''---the inversion of an established assumption---should be explicit, as it informs both the claim type and the corresponding evaluation design.
+Most research claims can be categorized into three structures: (1) comparative claims ($X$ outperforms $Y$), (2) existence claims (demonstrating feasibility of $X$), or (3) bounding/measuring claims (showing that $X$ holds within certain constraints).
+Each structure naturally implies a specific evaluation method: comparative benchmarking, constructive demonstration or proof, or measurement under varied conditions.
+
+An evaluation framework must define four core components:
+\begin{enumerate}
+    \item \textbf{Dependent variable} (outcome or $y$-axis), such as accuracy, runtime, or satisfaction.
+    \item \textbf{Independent variable} (input or $x$-axis), which is deliberately manipulated, such as algorithm choice, dataset quality, or system configuration.
+    \item \textbf{Task}, the specific procedure that links changes in the independent variable to observable outcomes in the dependent variable.
+    \item \textbf{Threats to validity}, i.e., potential sources of bias or confounding factors, ranging from sampling bias to confirmation bias.
+\end{enumerate}
+
+Threats to validity can be mitigated through argumentation (justifying irrelevance), stratification (rerunning under different strata to check robustness), randomization (controlling order effects or sampling bias), and open communication (seeking external critique to counteract confirmation bias).
+These strategies come with trade-offs: experiments may be costly, arguments less convincing, and communication risks premature disclosure.
+Awareness of these trade-offs enables informed methodological choices.
+
+Where possible, evaluation designs should follow established practices in the relevant literature rather than inventing new metrics or benchmarks without strong justification.
+Altering evaluation metrics adds risk by introducing multiple points of potential failure, though in some cases (e.g., proposing widely adoptable benchmarks) it can yield high impact.
+
+Finally, statistical analysis quantifies whether observed effects are likely to generalize beyond the specific sample studied.
+Statistical significance testing (e.g., $p < 0.05$) estimates the probability that results would hold across hypothetical parallel worlds, but should be preceded by descriptive analysis (plots, summary statistics) to detect outliers and artifacts.
+Each statistical test carries assumptions about the data; thus, researchers must select methods aligned with their data type and experimental design.
+The rigor of an evaluation---its clarity, alignment with claims, and robustness against threats---ultimately determines the persuasive power of the research.

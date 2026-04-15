@@ -1,0 +1,90 @@
+% 22_dual_strategies.tex — Dual Strategies for AI Research: Insights from MIT Lecture 1.2
+
+\section{Dual Strategies for AI Research: Insights from MIT Lecture 1.2}
+\label{sec:dual_strategies}
+
+Paul Liang, MIT. Lecture 1.2 - Introduction to AI Research
+
+Links:
+\href{https://mit-mi.github.io/how2ai-course/spring2025/}{Course website}
+\href{https://mit-mi.github.io/how2ai-course/spring2025/schedule/lec1.2%20-%20AI%20research.pdf}{Slides}
+\href{https://www.youtube.com/watch?v=104FX8MYKAM}{Video}
+
+Overview
+\begin{itemize}
+    \item How to generate research ideas
+    \item How to read a paper
+    \item How to execute research ideas
+    \item How to write a paper
+\end{itemize}
+
+In a foundational lecture from the MIT ``How to AI Almost Anything'' course (Spring 2025), the instructor presents a systematic process for AI research.
+This process is framed as an iterative loop of (1) initial observation and ideas, (2) literature review, (3) research questions and hypotheses, (4) test with experiments, and (5) analyze data and (6) report conclusions.
+The lecture's core advice for navigating this loop centers on two distinct, risk-aware strategies for generating research ideas.
+
+One of the most important questions in scientific research is how to get research ideas.
+There are two general ways, the first one is to turn a concrete understanding of research's failings to a higher-level experimental question, which is called the \textbf{``bottom-up discovery''}.
+It is a great tool for incremental progress, but it may preclude breakthroughs that bridge larger gaps.
+
+Another way is to move from a higher-level question to a lower-level concrete testing of that question, which is called the \textbf{``top-down discovery''}.
+It favors bigger ideas, but can be disconnected from reality.
+
+\textbf{Research questions.} One or several explicit questions regarding the thing you want to know.
+Hypotheses are easier to draft with ``yes-no'' questions rather than ``how to'' questions.
+
+\textbf{Hypothesis.} What you think the answer to the question may be a-priori.
+Should be \textit{falsifiable}: if you get a certain result the hypothesis will be validated, otherwise disproved.
+
+Examples of research questions.
+
+Beware ``Does X Make Y Better'' ``Yes''
+
+The above question/hypothesis is natural, but indirect.
+If the answer is ``no'' after your experiments, how do you tell what's going wrong?
+
+Usually you have an intuition about \textit{why} X will make Y better (not just random).
+
+Can you think of other research questions/hypotheses that confirm/falsify these assumptions?
+
+How to do Literature Review and Read a Paper?
+\begin{enumerate}
+    \item Google scholar
+    \item Papers with code, Github, Huggingface
+    \item Recent conference proceedings
+    \item Blog posts
+    \item Survey papers, tutorials, courses.
+\end{enumerate}
+
+Derisking testing of research ideas:
+\begin{enumerate}
+    \item Gather and process dataset, visualize data, gather labels, do data splits.
+    \item Implement the most simple pipeline and get it working. Pipeline = data loading + basic model + eval function + loss/visualization/deployment.
+    \item Change one component of the model at a time, repeat x10 (top-down or bottom-up).
+    \item Find what works best, and exploit.
+    \item Scale up experiments, repeat across multiple datasets.
+    \item Careful ablation studies.
+    \item Qualitative comparisons and visualizations.
+    \item Repeat until successful.
+\end{enumerate}
+
+\paragraph{Bottom-Up Discovery (Low-Risk)}
+This strategy is presented as the ``safer'' path, ideal for ``incremental and steady progress.''
+Researchers employing this method begin by surveying state-of-the-art (SOTA) models to identify not just what works, but more critically, what fails.
+The core of this approach is rigorous \textbf{error analysis} to taxonomize these failure modes.
+The subsequent research goal becomes proposing and implementing a novel method to specifically remediate these identified errors.
+This bottom-up approach provides a structured timeline for a project: a proposal to scope the area, a midterm report to analyze existing failures, and a final report to present the novel solution.
+
+\paragraph{Top-Down Research (High-Risk)}
+In contrast, top-down research begins with ``larger research themes'' or ``moonshot ideas.''
+Instead of starting from existing failures, this approach starts from a high-level vision that, if achieved, would represent a ``large leap'' in the field.
+The instructor notes this strategy is inherently ``more risky.''
+Success requires breaking the ambitious goal into feasible sub-problems and engaging in frequent brainstorming with mentors to validate the direction and ensure the project is tractable within a given timeframe.
+
+\paragraph{De-risking Hypotheses via Falsifiable Questions}
+A key tactical recommendation for de-risking \textit{any} research idea lies in the rigorous formulation of the research question.
+The instructor strongly advocates for phrasing questions to be \textbf{``yes/no in nature.''}
+This structure is preferred because it makes hypotheses ``easily verifiable and falsifiable.''
+This is contrasted with less effective questions, such as ``Does X make Y better?''
+If the answer is no, the research path is blocked.
+A more robust formulation is \textbf{``\textit{Why} X makes Y better?''}
+This question tests a specific, falsifiable \textit{property} of X, providing a clear path forward and a deeper insight regardless of the outcome.

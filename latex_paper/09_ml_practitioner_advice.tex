@@ -1,0 +1,85 @@
+% 09_ml_practitioner_advice.tex — Machine Learning Advice: Insights from Rylan Shaeffer
+
+\section{Machine Learning Advice: Insights from Rylan Shaeffer}
+\label{sec:ml_practitioner_advice}
+
+\subsection{ML Practitioner Advice}
+
+\paragraph{Look at Your Data}
+Shaeffer emphasized that the most important step in ML practice is to carefully inspect your data.
+Many model failures can be traced back to issues such as mislabeled samples or repetitive content.
+For instance, large models have been known to crash during training due to low-quality forum posts with repeated phrases.
+Debugging often starts not with the model, but with the data.
+
+\paragraph{Choose the Right Metrics}
+Emergent behavior in models can be misleading if the evaluation metric is poorly chosen.
+For example, exact-match accuracy on multi-digit arithmetic makes small improvements invisible until a threshold is crossed.
+Using more informative metrics like edit distance can reveal gradual progress and guide model development more effectively.
+
+\paragraph{Optimize the Right Thing}
+Shaeffer emphasized that optimizing the wrong objective can lead to unintended outcomes.
+In one case, a model trained to prefer shorter answers learned to hyphenate words to reduce word count without being more concise.
+Effective optimization must be aligned with actual goals---not just with proxies that are easy to measure.
+
+\paragraph{Relentlessly Climb the Right Hill}
+Shaeffer stressed the importance of iteration velocity once the right objective is identified.
+Rather than over-designing or over-optimizing prematurely, teams should quickly identify bottlenecks, fix them, and repeat.
+He cited AlphaFold's internal culture, where progress came not from cleverness, but from systematically improving the system through fast, focused iteration.
+
+\louise{Note: I think the advice on ``Optimize the right thing'' and ``Relentlessly Climb the Right Hill'' perfectly match the idea of Vectoring and Velocity in CS197 lecture. Later we could probably draw connections between them or combine them if we plan to write the paper in secs of topics.}
+
+\paragraph{Don't Fool Yourself}
+Shaeffer warned that ML systems can appear to work while hiding critical bugs.
+He recalled training a model that achieved 100\% accuracy---only to realize it was predicting inputs it had already seen due to a data indexing error.
+In ML, unlike traditional software, silent failures are common.
+If results look too good to be true, they usually are.
+Careful validation is essential.
+
+\paragraph{Scale Simple Things}
+Simple methods that scale well with compute and data often outperform more intricate designs.
+Shaeffer pointed out that recent successes by lean teams, like DeepSeek, were made possible by focusing on minimal but scalable architectures.
+In modern ML, algorithms that handle growth efficiently often dominate.
+
+\paragraph{Understand the Leaky Abstractions}
+Shaeffer stressed that ML systems are full of leaky abstractions---design choices in one layer often impact others in unexpected ways.
+For example, choosing a sigmoid activation may seem harmless, but without understanding backpropagation, one might miss that it causes vanishing gradients and slows learning.
+Worse, such choices can also affect hardware: unlike ReLU, which is zero on half its domain, smooth activations keep transistors switching, generate more heat, and trigger thermal throttling on GPUs.
+As a result, model performance, training speed, and cost can all suffer.
+Thus, in ML, you must be comfortable debugging across the stack---data, architecture, optimization, and hardware cannot be cleanly separated.
+
+\subsection{Career Advice}
+
+\paragraph{Align with What's Changing}
+Shaeffer encouraged students to think about what will become possible in the near future, rather than optimizing for current norms.
+As AI capabilities grow, new roles and opportunities will emerge that may not yet exist.
+Planning for the future means anticipating change rather than reacting to it.
+
+\paragraph{Research vs.\ Product Tension}
+In real-world organizations, research and product goals often conflict.
+Research values correctness and understanding, while product prioritizes speed and delivery.
+Recognizing which environment suits your goals is key to making informed career choices.
+
+\subsection{Personal Advice}
+
+Shaeffer drew a parallel between human learning and machine learning: just as models learn through iterative updates and feedback, so too can individuals.
+Insights from ML can inform how we respond to failure, make decisions, and chart long-term progress.
+
+\paragraph{Errors Are Signals}
+In machine learning, errors are not setbacks---they are signals to improve.
+Shaeffer noted that models do not give up after incorrect outputs; they update and try again.
+Adopting this mindset in life promotes resilience: mistakes are not evidence of inadequacy, but opportunities for refinement.
+
+\paragraph{Local Minima Are Rare in Life}
+Shaeffer applied high-dimensional optimization theory to life decisions.
+While it's common to fear becoming stuck in a suboptimal job or path, true local minima---situations with no viable direction for improvement---are rare in high-dimensional spaces.
+As long as one continues to explore, some direction for progress almost always exists.
+
+\paragraph{Estimate Your Critical Batch Size}
+Good decision-making involves balancing exploration with action.
+Borrowing from the idea of a ``critical batch size'' in optimization, Shaeffer advised collecting just enough information to guide meaningful choices---then moving forward.
+Over-collecting data leads to inertia; identifying when to stop evaluating and start acting is a transferable lesson.
+
+\paragraph{Failure Is Not Final}
+To illustrate the nonlinearity of growth, Shaeffer recounted Geoffrey Hinton's early academic struggles.
+Despite once failing out of physics, Hinton later made foundational contributions to AI and won a Nobel Prize.
+In both ML and life, failure does not preclude eventual success---what matters is continued learning and adaptation.
