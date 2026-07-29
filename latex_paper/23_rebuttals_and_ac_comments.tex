@@ -1,0 +1,157 @@
+% 23_rebuttals_and_ac_comments.tex — Writing the Author Response: Rebuttals and the AC Comment
+
+\section{Writing the Author Response: Rebuttals and the AC Comment}
+\label{sec:rebuttals_and_ac_comments}
+
+The publication lifecycle covered so far ends at submission.
+The step immediately after it---the author response, or rebuttal---receives almost no explicit training, and the feedback loop is slow: an author writes one or two rebuttals per year and never observes the counterfactual.
+This section records the heuristics we applied during a recent NeurIPS position-paper reviewing cycle, refined by advisor and co-author review of our own draft responses.
+We state them as heuristics from a single cycle rather than as established findings; venues differ, and area chairs differ within a venue.
+The organising claim is that the response has one primary reader, and it is not the reviewer who wrote the harshest sentence.
+
+\subsection*{Priority: The Response Is Written for the Area Chair}
+
+Reviewers rarely revise scores.
+An author can answer a weakness cleanly, receive an acknowledgement that the concern is addressed, and see the numeric score remain unchanged; the reviewer has already committed a position to the record, and updating it carries a cost.
+The area chair (AC) is differently situated.
+The AC must produce a decision from the entire record---every review, every response, the reviewer discussion, and their own reading---and is the only participant who sees all threads side by side.
+
+Two consequences follow.
+First, \textbf{answer the AC metareview before addressing individual reviews}, while attention is still fresh.
+If the metareview names three concerns, those three concerns are the paper's operative weaknesses for decision purposes, irrespective of what any single reviewer chose to emphasise.
+Second, \textbf{cross-thread consistency becomes load-bearing rather than cosmetic}.
+Describing an effect as small in one thread and as clear in another is visible only to the reader who holds both, which is precisely the reader who decides.
+
+\textbf{After the metareview, bias effort by score: lowest first, then the middling reviews, and leave a strong accept largely alone.}
+The rationale is again about the AC's position.
+A uniform set of accepts is straightforward to defend in committee; one strong accept adjacent to a reject is not, and a single low score obliges the AC to justify the outcome.
+The corollary is less obvious and worth stating: a strong accept can be lost during the rebuttal, not by pushing back, but by conceding so extensively across the response that the reviewer re-examines their own generosity.
+Concession density deserves attention on the reviews that are already favourable.
+
+\subsection*{Whether to Concede}
+
+\textbf{Never concede blindly.}
+Concede a genuine error, or a limitation that the evidence in hand actually establishes.
+Otherwise clarify, or point to material the paper already contains, which is the correct answer more often than authors under time pressure assume.
+
+\textbf{Verify a technical premise before accepting it.}
+Reviewer premises are sometimes factually wrong.
+A representative case: a review asserts that the comparison used a weaker baseline, when the two methods are the same algorithm published under different names.
+Conceding that premise commits a false statement to the record in a place the AC will read.
+
+One pattern is easy to misclassify as an attack.
+When a reviewer proposes an unmeasured property as an alternative explanation for a reported effect, and the paper's position is that such properties should be measured and reported, the reviewer has supplied support for the position rather than a refutation of it.
+The appropriate response credits the reviewer, agrees, and states what the alternative explanation implies for practice.
+
+Where the honest answer lies between the reviewer's reading and the paper's, \textbf{prefer calibrated refinement to dramatic retreat}.
+``A clear change in observed behaviour, small in magnitude'' is defensible under scrutiny.
+``We withdraw the claim'' invites the AC to ask which remaining claims are similarly soft.
+
+\subsection*{How to Concede}
+
+The wording of a concession carries as much weight as the decision to make one, and this is where drafts most often fail internal review.
+
+Formulations such as ``we concede two points outright,'' ``we withdraw,'' and ``this is our error'' surrender more than the reviewer requested and make the paper sound broken to a reader who is skimming.
+A co-author will object to such a sentence before reaching the substance beneath it, which is a reliable predictor of how an AC will read it.
+
+\textbf{Concede the specific thing, never the category.}
+``That word claims more than the numbers support, and we will change it'' is a bounded wording fix.
+``The claim is unsupported'' is an admission about the paper's evidence, and the reviewer did not ask for it.
+
+\textbf{Never volunteer self-criticism harsher than the reviewer's own framing.}
+A reviewer writing that two constructs are ``connected but not the same'' has made a request for precision, not an accusation of error, and should be answered as such.
+Intensifiers on concessions cost credibility and buy nothing: ``outright,'' ``without qualification,'' ``entirely,'' ``completely,'' ``we were wrong.''
+The unmodified verb is stronger.
+Nor should an author direct a reviewer to the paper's weakest point.
+Writing ``this is the sharpest gap in the paper'' happens, usually out of a sense of candour; the reviewer has already scored the submission and does not need the assistance.
+
+Two rules do most of the work in practice.
+\begin{enumerate}
+    \item \textbf{Every concession names what changes and where.}
+    ``We will revise the phrasing in \S4.2 and add the caveat to the caption of Table 3.''
+    A concession with no stated consequence reads as evasion even when it is sincere.
+    \item \textbf{Every concession appears alongside what survives it}, in the same paragraph.
+    Give up the overclaiming word, then state the finding the word was overclaiming, which remains intact.
+\end{enumerate}
+
+Close the response on what stands, not on a tally of what changed.
+
+\subsection*{Evidence}
+
+\textbf{Every number in a response must be traceable to a table, section, or line the reviewer can open.}
+A practical test: if a co-author cannot locate the number, a reviewer certainly cannot.
+
+\textbf{Prefer facts already present in the submitted PDF to anything generated inside the rebuttal window.}
+The strongest available answers are frequently already in the paper's own appendix tables, unread because appendices are long and reviewers are busy.
+Directing a reviewer to an existing table is more persuasive than a hurried new experiment, and considerably cheaper.
+
+When new analysis is unavoidable, label it accurately.
+\textbf{A post hoc comparison is a sensitivity check, not a controlled experiment}, and describing it as the latter is the kind of imprecision an attentive reviewer will notice and remember.
+State $n$.
+When the evidence is that three conditions fell in the predicted order, state that a perfect ordering of three arises by chance with probability $1/6$; it is better said by the authors than by the reviewer.
+Keep association and causation distinct, and where only association is available, name the design that would identify the causal claim.
+\textbf{Pre-empt what a careful reviewer would find}, including the outlier row in the very table being cited.
+
+Two further constraints:
+\begin{itemize}
+    \item \textbf{Results, not promises.}
+    Reviewers discount promised experiments heavily, and the discount is warranted.
+    \item \textbf{Do not cite an adjacent unpublished or parallel paper of your own.}
+    It compromises double-blind review, and it invites a critique that cannot be answered inside the response: why is this two papers if the load-bearing evidence lives in the other one?
+    Absorb the scope gap instead.
+\end{itemize}
+
+\subsection*{Construction}
+
+\textbf{Answer the question actually asked, not the adjacent question that is easier to answer.}
+``What is the consequence for an experimentalist?'' requires concrete actions; restating the mechanism is a non-answer, and a reviewer who asked a practical question will register it as one.
+
+\textbf{Follow each reviewer's own numbering}---W1, W2, Q1---so that every item is visibly discharged.
+This serves the reviewer and, more importantly, the AC scanning for unanswered items.
+Thank reviewers for strengths specific to their review, briefly; generic praise of a thin review is legible as such to the AC reading both documents.
+When a reviewer supplies a useful framing and asks that it be made explicit, adopt it, credit them in a clause, and add something beyond it.
+Pure echo is a thank-you note, and it forfeits an opportunity to show that the framing extends further than the reviewer suggested.
+
+Smaller mechanical points that erode under time pressure: use third person for all self-citation, without exception; do not pad to the character limit, since length is not the objective; avoid absolutes such as ``solves selection bias,'' ``isolates $X$,'' ``$X$ causes $Y$,'' and ``method $M$ wins''; keep numbers and claims consistent across all threads.
+Ask what would raise the reviewer's score.
+Never ask for a higher score.
+
+\subsection*{Voice: The Response Must Not Read as Machine-Written}
+
+Reviewers penalise author responses that read as language-model output, and some tracks prohibit AI-written responses outright.
+Whatever one's view of the policy, it is the operative incentive.
+The target register is a tired expert writing carefully.
+
+The reliable tells, roughly in descending order of how loudly they announce themselves:
+\begin{itemize}
+    \item \textbf{Uniform sentence length.}
+    A run of same-length balanced sentences is the strongest single signal.
+    \item \textbf{Recurring frames}: ``not $X$, but $Y$,'' ``it is worth noting that,'' ``this is precisely why,'' ``we would like to emphasise,'' ``delve,'' ``leverage,'' and ``robust'' used as filler.
+    \item \textbf{Em-dash saturation.}
+    Roughly one per section; commas, colons, and full stops remain available.
+    \item \textbf{Triads used for rhythm rather than content}, as in ``clear, actionable, and testable.''
+    \item \textbf{Consecutive paragraphs with identical openings}, such as two paragraphs beginning ``We agree.''
+    \item \textbf{Symmetrical section openings.}
+    Human writing is uneven, and one section being blunter than the others reads as authored.
+    \item \textbf{Abstractions where a number would serve.}
+    ``Table 7 gives $-0.105$'' is stronger than ``the empirical evidence indicates.''
+\end{itemize}
+
+Contractions in moderation help; a perfectly formal register maintained throughout reads as generated.
+Read the response aloud before posting, which catches more than any checklist, including the one in Appendix~\ref{appendix:rebuttal_checklist}.
+
+\subsection*{The AC Comment, Written Last}
+
+The comment to the area chair is drafted last, because it summarises the reviewer threads and cannot be written before those threads are settled.
+\textbf{Mirror the AC's stated priorities, in the AC's order, with the AC's numbering.}
+Three concerns in the metareview become three parts in that sequence.
+Then close with an enumerated list of manuscript changes and the location of each.
+That list is the most useful paragraph in the entire response, because it is the item the AC can point to when writing the decision.
+
+\subsection*{Limits of This Advice}
+
+This is one cycle, one track, one paper, and the specifics should be treated accordingly.
+The claim we would defend most firmly is that the AC is the primary audience, which follows from the structure of the process rather than from our experience of it.
+The claim we would defend least is the concession-density argument---that a strong accept can be lost by over-conceding---which we believe on the basis of advisor and co-author judgement and cannot establish from a single cycle.
+Venues also vary in how closely area chairs read author responses, and an author cannot determine which case they are in until the decision is released.
+What we expect to generalise is the underlying reorientation: write for the participant who must defend a decision, rather than for the reviewer who caused the most irritation.
